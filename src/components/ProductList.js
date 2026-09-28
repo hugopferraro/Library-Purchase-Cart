@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const ProductList = ({ products }) => {
   const dispatch = useDispatch();
@@ -16,6 +17,9 @@ const ProductList = ({ products }) => {
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       ))}
+      <p>
+        <Link to="/cart">View Cart</Link>
+      </p>
     </div>
   );
 };
