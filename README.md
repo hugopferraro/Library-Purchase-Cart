@@ -56,6 +56,8 @@ npm run quality
 
 O comando executa, nesta ordem, lint sem tolerância a avisos, verificação estrita de tipos, testes automatizados e build de produção.
 
+Na verificação final, ESLint e TypeScript foram aprovados, os 7 testes automatizados passaram, a auditoria com axe não encontrou violações na página inicial e o build de produção foi concluído com sucesso. A versão publicada também foi validada manualmente com Lighthouse, teclado, NVDA, zoom de 200% e diferentes larguras de tela.
+
 | Comando | Finalidade |
 | --- | --- |
 | `npm run lint` | Qualidade estática e regras de acessibilidade JSX |
@@ -76,4 +78,9 @@ O repositório já contém `vercel.json` para que as rotas da SPA sejam redireci
 
 ## Documentação
 
-O relatório da atividade está em [docs/documentacao.md](docs/documentacao.md). Ele registra a análise anterior, as decisões de acessibilidade e os resultados dos testes automatizados e manuais realizados após a publicação.
+O relatório da atividade está disponível nos seguintes formatos:
+
+- [Documentação em Markdown](docs/documentacao.md);
+- [Relatório final em PDF](docs/HugoPorto_ProjetoLivrariaOnline_Acessibilidade.pdf).
+
+O relatório registra a análise da versão anterior, as decisões de acessibilidade e os resultados dos testes automatizados e manuais realizados após a publicação.
