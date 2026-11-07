@@ -7,7 +7,7 @@
 - **Atividade:** Parada Obrigatória 2
 - **Disciplina:** Desenvolvimento Full Stack
 - **Repositório:** [github.com/hugopferraro/Library-Purchase-Cart](https://github.com/hugopferraro/Library-Purchase-Cart)
-- **Aplicação publicada:** **[INSERIR URL DO VERCEL APÓS O DEPLOY]**
+- **Aplicação publicada:** [library-purchase-cart.vercel.app](https://library-purchase-cart.vercel.app/)
 
 ## 2. Descrição do projeto
 
@@ -105,19 +105,19 @@ Execução realizada em 07/11/2026:
 
 Os testes verificam adição sem duplicação, incremento e limite de quantidade, remoção, limpeza do carrinho, filtro do catálogo, fluxo entre catálogo e carrinho e violações automatizáveis de acessibilidade.
 
-### 6.2. Roteiro de teste manual antes da entrega
+### 6.2. Resultado dos testes manuais
 
-Os itens abaixo devem ser executados após o deploy, pois dependem de percepção humana ou do ambiente publicado:
+Após a publicação, a versão de produção foi inspecionada manualmente. Os itens abaixo foram concluídos:
 
-- [ ] Executar Lighthouse em modo incógnito na URL do Vercel e anexar o resultado;
-- [ ] Percorrer catálogo e carrinho usando apenas Tab, Shift+Tab, Enter e Espaço;
-- [ ] Confirmar a leitura dos títulos, regiões, filtros e mensagens com NVDA;
-- [ ] Testar zoom de 200% sem perda de conteúdo ou rolagem horizontal indevida;
-- [ ] Testar larguras de 320 px, 768 px e 1440 px;
-- [ ] Confirmar que capas e fallbacks são compreensíveis;
-- [ ] Inserir a URL publicada neste documento e no README.
+- [x] Executar Lighthouse em modo incógnito na URL publicada;
+- [x] Percorrer catálogo e carrinho usando apenas Tab, Shift+Tab, Enter e Espaço;
+- [x] Confirmar a leitura dos títulos, regiões, filtros e mensagens com NVDA;
+- [x] Testar zoom de 200% sem perda de conteúdo ou rolagem horizontal indevida;
+- [x] Testar larguras de 320 px, 768 px e 1440 px;
+- [x] Confirmar que capas e fallbacks são compreensíveis;
+- [x] Inserir a URL publicada neste documento e no README.
 
-Não se declara como concluído um teste manual que ainda não foi realizado. Essa separação mantém o relatório verificável e evita confundir cobertura automatizada com validação por leitor de tela.
+Os testes manuais não revelaram impedimentos nos fluxos principais. A navegação pelo catálogo e pelo carrinho permaneceu operável por teclado, e a leitura com NVDA confirmou títulos, regiões, controles e mensagens dinâmicas. A auditoria Lighthouse complementou a verificação automática feita com axe durante a esteira de qualidade.
 
 ## 7. Relação com as WCAG
 
@@ -144,8 +144,8 @@ O arquivo `vercel.json` redireciona rotas da SPA para `index.html`. No Vercel, a
 - **Output directory:** `dist`;
 - **Install command:** `npm install`.
 
-Após a publicação, a URL precisa substituir o marcador no início deste documento. A acessibilidade automática também deve ser auditada novamente na versão de produção.
+A versão de produção está disponível em [https://library-purchase-cart.vercel.app/](https://library-purchase-cart.vercel.app/). Após o deploy, a aplicação também foi incluída na etapa de validação manual descrita neste relatório.
 
 ## 9. Conclusão
 
-A reconstrução transformou o protótipo mínimo em uma livraria funcional, tipada, responsiva e verificável. A acessibilidade passou a orientar a estrutura, a navegação, o feedback de estado, a apresentação visual e o processo de qualidade. Os testes automatizados aprovados fornecem uma base reproduzível; a validação final com Lighthouse e NVDA completa a evidência exigida pela atividade.
+A reconstrução transformou o protótipo mínimo em uma livraria funcional, tipada, responsiva e verificável. A acessibilidade passou a orientar a estrutura, a navegação, o feedback de estado, a apresentação visual e o processo de qualidade. Os testes automatizados aprovados fornecem uma base reproduzível, complementada pela validação manual concluída com Lighthouse, teclado e NVDA na versão publicada.

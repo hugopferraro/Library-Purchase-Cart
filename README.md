@@ -2,7 +2,7 @@
 
 Livraria online acessível desenvolvida para a **Parada Obrigatória 2** da disciplina de Desenvolvimento Full Stack. A aplicação oferece catálogo com busca e filtros, carrinho persistente e uma experiência responsiva pensada para teclado, leitores de tela e diferentes preferências de movimento.
 
-> **Aplicação publicada:** o endereço do Vercel será inserido aqui após o primeiro deploy.
+> **Aplicação publicada:** [library-purchase-cart.vercel.app](https://library-purchase-cart.vercel.app/)
 
 ## Funcionalidades
 
@@ -72,8 +72,8 @@ O repositório já contém `vercel.json` para que as rotas da SPA sejam redireci
 1. Importe este repositório em [vercel.com](https://vercel.com/);
 2. Confirme **Framework Preset: Vite**;
 3. Use `npm run build` como Build Command e `dist` como Output Directory;
-4. Publique e substitua o marcador de link neste README e em `docs/documentacao.md`.
+4. A versão publicada está disponível em [library-purchase-cart.vercel.app](https://library-purchase-cart.vercel.app/).
 
 ## Documentação
 
-O relatório da atividade está em [docs/documentacao.md](docs/documentacao.md). Ele registra a análise anterior, as decisões de acessibilidade, os testes realizados e os itens manuais que ainda precisam ser validados com NVDA e Lighthouse após a publicação.
+O relatório da atividade está em [docs/documentacao.md](docs/documentacao.md). Ele registra a análise anterior, as decisões de acessibilidade e os resultados dos testes automatizados e manuais realizados após a publicação.
