@@ -1,8 +1,10 @@
 # Dependencies
 /node_modules
 
-# Production build
+# Production builds and reports
 /build
+/dist
+/coverage
 
 # Local environment files
 .env.local
@@ -18,3 +20,10 @@ yarn-error.log*
 # Operating system files
 .DS_Store
 Thumbs.db
+
+assignment.md
+
+# Vite local files
+*.local
+
+.vercel

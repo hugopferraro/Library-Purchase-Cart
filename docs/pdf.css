@@ -1,0 +1,147 @@
+@page {
+  size: A4;
+  margin: 18mm 18mm 20mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+body.documentacao {
+  max-width: none;
+  margin: 0;
+  color: #1e293b;
+  background: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+  color: #163a63;
+  font-weight: 650;
+  line-height: 1.25;
+  page-break-after: avoid;
+  break-after: avoid-page;
+}
+
+h1 {
+  margin: 0 0 18pt;
+  padding-bottom: 10pt;
+  border-bottom: 2px solid #2f6da8;
+  font-size: 23pt;
+}
+
+h2 {
+  margin: 20pt 0 8pt;
+  font-size: 16pt;
+}
+
+h3 {
+  margin: 15pt 0 6pt;
+  font-size: 12.5pt;
+}
+
+p {
+  margin: 0 0 9pt;
+  text-align: justify;
+}
+
+ul,
+ol {
+  margin: 5pt 0 10pt;
+  padding-left: 22pt;
+}
+
+li {
+  margin-bottom: 3pt;
+}
+
+a {
+  color: #185c96;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+code {
+  padding: 1pt 3pt;
+  border-radius: 3px;
+  color: #9f1239;
+  background: #f1f5f9;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 125mm;
+  margin: 12pt auto 5pt;
+  border: 1px solid #cbd5e1;
+  object-fit: contain;
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+img + p,
+img + em {
+  page-break-before: avoid;
+  break-before: avoid-page;
+}
+
+p:has(> em:only-child) {
+  margin-bottom: 13pt;
+  color: #475569;
+  font-size: 9pt;
+  text-align: center;
+  page-break-before: avoid;
+  break-before: avoid-page;
+}
+
+table {
+  width: 100%;
+  margin: 10pt 0;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+th,
+td {
+  padding: 7pt 8pt;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: #ffffff;
+  background: #2f6da8;
+}
+
+tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+blockquote {
+  margin: 10pt 0;
+  padding: 8pt 12pt;
+  border-left: 3px solid #2f6da8;
+  color: #475569;
+  background: #f8fafc;
+}
+
+pre,
+blockquote,
+table,
+figure {
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}

@@ -1,83 +1,79 @@
-# Carrinho de Compras de Livraria
+# Estante Livre
 
-Projeto desenvolvido para a atividade **Parada Obrigatória 1** da disciplina de Desenvolvimento Full Stack.
+Livraria online acessível desenvolvida para a **Parada Obrigatória 2** da disciplina de Desenvolvimento Full Stack. A aplicação oferece catálogo com busca e filtros, carrinho persistente e uma experiência responsiva pensada para teclado, leitores de tela e diferentes preferências de movimento.
 
-A aplicação representa um carrinho de compras simples para uma livraria virtual. Ela permite visualizar os livros disponíveis, adicioná-los ao carrinho, consultar os itens adicionados e removê-los.
+> **Aplicação publicada:** o endereço do Vercel será inserido aqui após o primeiro deploy.
 
 ## Funcionalidades
 
-- Exibição dos produtos disponíveis;
-- Adição de produtos ao carrinho;
-- Visualização dos itens adicionados;
-- Remoção de produtos do carrinho;
-- Navegação entre a lista de produtos e o carrinho.
+- Catálogo com seis livros, busca por título/autor e filtro por categoria;
+- Carrinho com adição, remoção, alteração de quantidade, totais e persistência local;
+- Rotas para catálogo, carrinho e página não encontrada;
+- Layout responsivo para computador, tablet e celular;
+- Feedback acessível para alterações dinâmicas do carrinho;
+- Fallback visual quando uma capa externa não pode ser carregada.
 
-## Tecnologias utilizadas
+## Acessibilidade
 
-- React 17;
-- Redux;
-- React Redux;
-- React Router DOM 5;
-- React Scripts.
+- HTML semântico com `header`, `nav`, `main`, `section`, `article`, `aside` e `footer`;
+- Hierarquia lógica de títulos e um único `h1` por rota;
+- Link de salto para o conteúdo principal;
+- Navegação integral por teclado e foco visível;
+- Transferência de foco ao navegar entre rotas;
+- Textos alternativos descritivos nas capas e imagens decorativas com `alt=""`;
+- Nomes acessíveis específicos em botões de adicionar, remover e alterar quantidades;
+- Regiões `aria-live` para quantidade do carrinho, resultados e confirmações;
+- Contraste alto, alvos de interação amplos e suporte a `prefers-reduced-motion`;
+- Teste automatizado com axe para detectar violações comuns das WCAG.
 
-As versões utilizadas são compatíveis com o código-base apresentado na atividade, que utiliza `ReactDOM.render` e o componente `Switch`.
+## Tecnologias
 
-## Estrutura do projeto
+- Vite 7, React 19 e TypeScript 5;
+- Redux Toolkit e React Redux;
+- React Router;
+- Vitest, Testing Library e jest-axe;
+- ESLint com regras de TypeScript, React Hooks e `jsx-a11y`;
+- Vercel como destino de publicação.
 
-```text
-public/
-  index.html
-src/
-  components/
-    Cart.js
-    ProductList.js
-  App.js
-  index.js
-  store.js
+## Executar localmente
+
+Requer Node.js 20.19+ ou 22.12+.
+
+```bash
+npm install
+npm run dev
 ```
 
-## Como executar
+Acesse o endereço exibido pelo Vite, normalmente `http://localhost:5173`.
 
-É necessário ter o Node.js e o npm instalados.
+## Qualidade
 
-1. Clone o repositório e acesse a pasta do projeto:
+Execute toda a esteira antes de enviar alterações:
 
-   ```sh
-   git clone <endereco-do-repositorio>
-   cd Library-Purchase-Cart
-   ```
+```bash
+npm run quality
+```
 
-2. Instale as dependências:
+O comando executa, nesta ordem, lint sem tolerância a avisos, verificação estrita de tipos, testes automatizados e build de produção.
 
-   ```sh
-   npm install
-   ```
-
-3. Inicie a aplicação:
-
-   ```sh
-   npm start
-   ```
-
-4. Acesse `http://localhost:3000` no navegador.
-
-## Como utilizar
-
-1. Na página inicial, clique em **Add to Cart** para adicionar um livro;
-2. Clique em **View Cart** para acessar o carrinho;
-3. Clique em **Remove** para remover um item;
-4. Clique em **Back to Products** para retornar à lista de produtos.
-
-## Rotas
-
-| Rota | Descrição |
+| Comando | Finalidade |
 | --- | --- |
-| `/` | Exibe a lista de livros disponíveis. |
-| `/cart` | Exibe os produtos adicionados ao carrinho. |
+| `npm run lint` | Qualidade estática e regras de acessibilidade JSX |
+| `npm run typecheck` | Verificação estrita do TypeScript |
+| `npm run test:run` | Testes unitários e de integração |
+| `npm run test:coverage` | Testes com relatório de cobertura |
+| `npm run build` | Build otimizado em `dist/` |
+| `npm run docs:pdf` | Gera o relatório PDF da atividade |
 
-## Gerenciamento de estado
+## Deploy no Vercel
 
-O Redux mantém a lista de produtos adicionados no estado global da aplicação. O projeto utiliza duas ações:
+O repositório já contém `vercel.json` para que as rotas da SPA sejam redirecionadas ao `index.html`.
 
-- `ADD_TO_CART`: adiciona um produto ao carrinho;
-- `REMOVE_FROM_CART`: remove um produto do carrinho.
+1. Importe este repositório em [vercel.com](https://vercel.com/);
+2. Confirme **Framework Preset: Vite**;
+3. Use `npm run build` como Build Command e `dist` como Output Directory;
+4. Publique e substitua o marcador de link neste README e em `docs/documentacao.md`.
+
+## Documentação
+
+O relatório da atividade está em [docs/documentacao.md](docs/documentacao.md). Ele registra a análise anterior, as decisões de acessibilidade, os testes realizados e os itens manuais que ainda precisam ser validados com NVDA e Lighthouse após a publicação.

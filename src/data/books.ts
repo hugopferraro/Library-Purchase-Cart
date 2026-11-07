@@ -1,0 +1,68 @@
+import type { Book } from '../types/book';
+
+export const books: Book[] = [
+  {
+    id: 'dom-casmurro',
+    title: 'Dom Casmurro',
+    author: 'Machado de Assis',
+    description: 'Um clássico brasileiro sobre memória, ciúme e as incertezas de Bentinho.',
+    category: 'Clássicos',
+    price: 39.9,
+    coverUrl: 'https://covers.openlibrary.org/b/isbn/9788582850350-L.jpg',
+    coverAlt: 'Capa do livro Dom Casmurro, de Machado de Assis',
+    featured: true,
+  },
+  {
+    id: 'orgulho-preconceito',
+    title: 'Orgulho e Preconceito',
+    author: 'Jane Austen',
+    description: 'Elizabeth Bennet desafia convenções e primeiras impressões nesta história atemporal.',
+    category: 'Clássicos',
+    price: 44.9,
+    coverUrl: 'https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg',
+    coverAlt: 'Capa do livro Orgulho e Preconceito, de Jane Austen',
+  },
+  {
+    id: 'o-hobbit',
+    title: 'O Hobbit',
+    author: 'J. R. R. Tolkien',
+    description: 'Bilbo Bolseiro parte em uma aventura repleta de enigmas, dragões e coragem.',
+    category: 'Fantasia',
+    price: 59.9,
+    coverUrl: 'https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg',
+    coverAlt: 'Capa do livro O Hobbit, de J. R. R. Tolkien',
+    featured: true,
+  },
+  {
+    id: 'duna',
+    title: 'Duna',
+    author: 'Frank Herbert',
+    description: 'Política, ecologia e destino se encontram no planeta desértico Arrakis.',
+    category: 'Ficção científica',
+    price: 69.9,
+    coverUrl: 'https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg',
+    coverAlt: 'Capa do livro Duna, de Frank Herbert',
+  },
+  {
+    id: '1984',
+    title: '1984',
+    author: 'George Orwell',
+    description: 'Uma distopia essencial sobre vigilância, linguagem e liberdade individual.',
+    category: 'Ficção científica',
+    price: 42.9,
+    coverUrl: 'https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg',
+    coverAlt: 'Capa do livro 1984, de George Orwell',
+  },
+  {
+    id: 'pequeno-principe',
+    title: 'O Pequeno Príncipe',
+    author: 'Antoine de Saint-Exupéry',
+    description: 'Uma narrativa delicada sobre amizade, afeto e aquilo que os olhos não veem.',
+    category: 'Infantojuvenil',
+    price: 34.9,
+    coverUrl: 'https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg',
+    coverAlt: 'Capa do livro O Pequeno Príncipe, de Antoine de Saint-Exupéry',
+  },
+];
+
+export const categories = ['Todos', ...new Set(books.map((book) => book.category))];
